@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return color;
     }
 
+    function getSimilarColor(baseColor) {
+        const variation = 30; // Adjust this value to control the similarity
+        let color = '#';
+        for (let i = 1; i < 7; i += 2) {
+            let baseComponent = parseInt(baseColor.substr(i, 2), 16);
+            let newComponent = Math.min(255, Math.max(0, baseComponent + Math.floor(Math.random() * variation - variation / 2)));
+            color += newComponent.toString(16).padStart(2, '0');
+        }
+        return color;
+    }
+
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -26,9 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function setNewGame() {
         targetColor = getRandomColor();
         colorBox.style.backgroundColor = targetColor;
-        const colors = Array.from({ length: 6 }, () => getRandomColor());
-        const randomIndex = Math.floor(Math.random() * 6);
-        colors[randomIndex] = targetColor;
+        const colors = [targetColor];
+        for (let i = 1; i < 6; i++) {
+            colors.push(getSimilarColor(targetColor));
+        }
 
         shuffle(colors); // Shuffle the colors array
 
