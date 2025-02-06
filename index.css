@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header{ 
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.header h2{
+    font-size: 110px;
+    text-align: center;
+    font-family: "Honk", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: 
+    "MORF" 15,
+    "SHLN" 50;
+    line-height: 1.5;
+}
+
+.header h4{
+    text-align: center;
+    line-height: 3;
+    font-size: 23px;
+    font-family: "Frijole", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.colorbox{
+    width: 30vh;
+    height: 30vh;
+    margin: 20px auto;
+    background-color: brown;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.colorbox h3{
+    padding-top: 12vh;
+    text-align: center;
+}
+
+.guessBtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.guessItem{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+

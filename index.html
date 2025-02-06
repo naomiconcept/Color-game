@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <h2> COLOR GAME</h2>
+        <h4 data-testid="gameInstructions"> Can you <b>guess</b> what button has <b>the right color</b> in the big box?</h4>
+        <div class="colorbox" data-testid="colorBox">
+            <h3>Your target color</h3>
+        </div>
+    </header>
+
+    <section>
+        <div class="guessBtn" data-testid="colorOption">
+            <div class="guessItem">
+                <p>Can it be me?</p>
+            </div>
+    
+            <div class="guessItem" data-testid="colorOption">
+                <p>Click me!</p>
+            </div>
+    
+            <div class="guessItem" data-testid="colorOption">
+                <p>It's me!</p>
+            </div>
+    
+            <div class="guessItem" data-testid="colorOption">
+                <p>Over here!</p>
+            </div>
+    
+            <div class="guessItem" data-testid="colorOption">
+                <p>Don't pass me?</p>
+            </div>
+    
+            <div class="guessItem" data-testid="colorOption">
+                <p>It could be me!</p>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p data-testid="gameStatus">Make a guess!</p>
+        <p>Score: <span data-testid="score">0</span></p>
+        <button data-testid="newGameButton">New Game</button>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
